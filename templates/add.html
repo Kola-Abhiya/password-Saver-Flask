@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Credential</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Add New Credential</h1>
+    <form method="POST">
+      <label for="website">Website:</label><br />
+      <input type="text" id="website" name="website" required /><br /><br />
+
+      <label for="username">Username:</label><br />
+      <input type="text" id="username" name="username" required /><br /><br />
+
+      <label for="password">Password:</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><br />
+
+      <button type="submit">Add</button>
+    </form>
+    <br />
+    <a href="/">Back to List</a>
+  </body>
+</html>

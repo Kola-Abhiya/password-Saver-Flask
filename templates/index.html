@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Manager</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Your Credentials</h1>
+    <a href="/add">Add New Credential</a>
+    <ul>
+      {% for cred in creds %}
+      <li>
+        <strong>{{ cred.website }}</strong> - {{ cred.username }} -
+        <a href="/view/{{ cred.id }}">View Password</a>
+      </li>
+      {% else %}
+      <li>No credentials stored.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

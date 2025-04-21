@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Credential</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Credential Details</h1>
+    <p><strong>Website:</strong> {{ cred.website }}</p>
+    <p><strong>Username:</strong> {{ cred.username }}</p>
+    <p><strong>Password:</strong> {{ password }}</p>
+    <a href="/">Back to List</a>
+  </body>
+</html>
